@@ -27,7 +27,6 @@
             </div>
         </div>
         <div class="row">
-
             <template v-if="!result.length && !loading">
                 <div class="col-12 text-center">
                     Please select two Occupations from above and click Compare
@@ -41,9 +40,8 @@
             <template v-if="result.length">
                 <div class="col-12">
                     <template v-for="(res, ind) in result" >
-                        <occupation-card :card="res" :key="ind" :id="ind"/>
+                        <occupation-card :card="res" :key="ind" :id="ind" />
                     </template>
-
                 </div>
             </template>
         </div>
@@ -80,6 +78,8 @@
                     this.result.unshift({
                         occupation_1: response.data.occupation_1,
                         occupation_2: response.data.occupation_2,
+                        occupations_1: response.data.occupations_1,
+                        occupations_2: response.data.occupations_2,
                         match: response.data.match
                     });
                     console.log(this.result);

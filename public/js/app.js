@@ -52902,8 +52902,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -52937,6 +52935,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.result.unshift({
                     occupation_1: response.data.occupation_1,
                     occupation_2: response.data.occupation_2,
+                    occupations_1: response.data.occupations_1,
+                    occupations_2: response.data.occupations_2,
                     match: response.data.match
                 });
                 console.log(_this.result);
@@ -54456,6 +54456,19 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Occupations__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Occupations___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Occupations__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -54480,9 +54493,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "OccupationCard",
-    props: ['card', 'id']
+    components: {
+        Occupations: __WEBPACK_IMPORTED_MODULE_0__Occupations___default.a
+    },
+    props: ['card', 'id'],
+    data: function data() {
+        return {
+            show: false
+        };
+    }
 });
 
 /***/ }),
@@ -54508,12 +54531,54 @@ var render = function() {
           _c("p", [_vm._v(_vm._s(_vm.card.occupation_2))])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm-2 d-flex text-center" }, [
+        _c("div", { staticClass: "col-sm-1 d-flex text-center" }, [
           _c("div", { staticClass: "match" }, [
             _c("p", [_vm._v(_vm._s(_vm.card.match) + "%")])
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-1 d-flex text-center" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-outline-secondary btn-xs",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.show = !_vm.show
+                }
+              }
+            },
+            [_vm._v(_vm._s(_vm.show == true ? "Hide" : "Show"))]
+          )
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _vm.show
+        ? _c("div", { staticClass: "row result" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-6" },
+              [
+                _c("Occupations", {
+                  attrs: { occupations: _vm.card.occupations_1 }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-6" },
+              [
+                _c("Occupations", {
+                  attrs: { occupations: _vm.card.occupations_2 }
+                })
+              ],
+              1
+            )
+          ])
+        : _vm._e()
     ])
   ])
 }
@@ -54565,6 +54630,151 @@ exports = module.exports = __webpack_require__(2)(false);
 
 // module
 exports.push([module.i, "\n.card[data-v-a060e91c] {\n  margin-bottom: 15px;\n}\n.card .d-flex[data-v-a060e91c] {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: left;\n        -ms-flex-pack: left;\n            justify-content: left;\n}\n.card p[data-v-a060e91c] {\n    font-size: 16px;\n}\n.card p strong[data-v-a060e91c] {\n      font-size: 75px;\n      color: #ddd;\n      line-height: 1;\n}\n.card .match p[data-v-a060e91c] {\n    font-size: 25px;\n    font-weight: bold;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(92)
+}
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(90)
+/* template */
+var __vue_template__ = __webpack_require__(91)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-66e69fbe"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Occupations.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-66e69fbe", Component.options)
+  } else {
+    hotAPI.reload("data-v-66e69fbe", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 88 */,
+/* 89 */,
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "Occupations",
+    props: ['occupations']
+
+});
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ul",
+    _vm._l(_vm.occupations, function(occ) {
+      return _c("li", { key: occ.label }, [
+        _c("div", { staticClass: "label" }, [_vm._v(_vm._s(occ.label))]),
+        _vm._v(" "),
+        _c("div", { staticClass: "value" }, [_vm._v(_vm._s(occ.value))])
+      ])
+    }),
+    0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-66e69fbe", module.exports)
+  }
+}
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(93);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("bc62cda8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-66e69fbe\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Occupations.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-66e69fbe\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Occupations.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\nul li[data-v-66e69fbe] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-line-pack: justify;\n      align-content: space-between;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\nul li div[data-v-66e69fbe] {\n    font-size: 14px;\n}\nul li div.value[data-v-66e69fbe] {\n      font-weight: bold;\n}\n", ""]);
 
 // exports
 

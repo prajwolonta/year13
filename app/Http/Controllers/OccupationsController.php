@@ -32,19 +32,19 @@ class OccupationsController extends BaseController
         $occupation_1_code = $request->get('occupation_1');
         $occupation_2_code = $request->get('occupation_2');
 
-        $occupation_1 = $this->occparser->get($occupation_1_code);
-        $occupation_2 = $this->occparser->get($occupation_2_code);
+        $occupations_1 = $this->occparser->get($occupation_1_code);
+        $occupations_2 = $this->occparser->get($occupation_2_code);
 
         /** IMPLEMENT COMPARISON **/
         $match = 0;
-        if((is_array($occupation_1) && count($occupation_1) > 0 ) &&
-            (is_array($occupation_2) && count($occupation_2) > 0)){
+        if((is_array($occupations_1) && count($occupations_1) > 0 ) &&
+            (is_array($occupations_2) && count($occupations_2) > 0)){
 
             // get total number of combined occupation
-            $total_occ = count($occupation_1) + count($occupation_2);
+            $total_occ = count($occupations_1) + count($occupations_2);
 
             // get all intersecting occupations
-            $intersecting_val = $this->getIntersectingVal($occupation_1, $occupation_2);
+            $intersecting_val = $this->getIntersectingVal($occupations_1, $occupations_2);
 
             // multiply intersecting count by 2 (intersect is a pair)
             $intersecting_occ = count($intersecting_val) * 2;
@@ -66,6 +66,8 @@ class OccupationsController extends BaseController
         return [
             'occupation_1' => $this->getOccupationByCode($occupation_1_code),
             'occupation_2' => $this->getOccupationByCode($occupation_2_code),
+            'occupations_1' => $occupations_1,
+            'occupations_2'=>$occupations_2,
             'match' => number_format($match, 2)
         ];
     }
