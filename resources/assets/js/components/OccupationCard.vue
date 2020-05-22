@@ -3,7 +3,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-1">
-                    <p><strong>#{{ key + 1}}</strong></p>
+                    <p><strong>#{{ id + 1}}</strong></p>
                 </div>
                 <div class="col-sm-5">
                     <p>{{ card.occupation_1 }}</p>
@@ -25,8 +25,7 @@
     export default {
         name: "OccupationCard",
         props: [
-            'card',
-            'key'
+            'card', 'id'
         ]
     }
 </script>

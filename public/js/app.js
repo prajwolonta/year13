@@ -54073,7 +54073,10 @@ var render = function() {
                 [
                   _vm._l(_vm.result, function(res, ind) {
                     return [
-                      _c("occupation-card", { key: ind, attrs: { card: res } })
+                      _c("occupation-card", {
+                        key: ind,
+                        attrs: { card: res, id: ind }
+                      })
                     ]
                   })
                 ],
@@ -54479,7 +54482,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "OccupationCard",
-    props: ['card', 'key']
+    props: ['card', 'id']
 });
 
 /***/ }),
@@ -54494,7 +54497,7 @@ var render = function() {
     _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-sm-1" }, [
-          _c("p", [_c("strong", [_vm._v("#" + _vm._s(_vm.key + 1))])])
+          _c("p", [_c("strong", [_vm._v("#" + _vm._s(_vm.id + 1))])])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm-5" }, [

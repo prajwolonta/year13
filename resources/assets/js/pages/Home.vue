@@ -41,7 +41,7 @@
             <template v-if="result.length">
                 <div class="col-12">
                     <template v-for="(res, ind) in result" >
-                        <occupation-card :card="res" :key="ind"/>
+                        <occupation-card :card="res" :key="ind" :id="ind"/>
                     </template>
 
                 </div>
