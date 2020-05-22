@@ -54057,13 +54057,11 @@ var render = function() {
                 )
               ])
             ]
-          : _vm.loading
-          ? [
+          : [
               _c("div", { staticClass: "col-12 text-center" }, [
                 _vm._v("\n                Please wait...\n            ")
               ])
-            ]
-          : _vm._e(),
+            ],
         _vm._v(" "),
         _vm.result.length
           ? [
@@ -54496,19 +54494,19 @@ var render = function() {
   return _c("div", { staticClass: "card" }, [
     _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-sm-1" }, [
+        _c("div", { staticClass: "col-sm-2 d-flex" }, [
           _c("p", [_c("strong", [_vm._v("#" + _vm._s(_vm.id + 1))])])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm-5" }, [
+        _c("div", { staticClass: "col-sm-4 d-flex" }, [
           _c("p", [_vm._v(_vm._s(_vm.card.occupation_1))])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm-4" }, [
+        _c("div", { staticClass: "col-sm-4 d-flex" }, [
           _c("p", [_vm._v(_vm._s(_vm.card.occupation_2))])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm-2" }, [
+        _c("div", { staticClass: "col-sm-2 d-flex text-center" }, [
           _c("div", { staticClass: "match" }, [
             _c("p", [_vm._v(_vm._s(_vm.card.match) + "%")])
           ])
@@ -54564,7 +54562,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.card[data-v-a060e91c] {\n  margin-bottom: 15px;\n}\n.card p[data-v-a060e91c] {\n    font-size: 16px;\n}\n.card .match p[data-v-a060e91c] {\n    font-size: 25px;\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "\n.card[data-v-a060e91c] {\n  margin-bottom: 15px;\n}\n.card .d-flex[data-v-a060e91c] {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: left;\n        -ms-flex-pack: left;\n            justify-content: left;\n}\n.card p[data-v-a060e91c] {\n    font-size: 16px;\n}\n.card p strong[data-v-a060e91c] {\n      font-size: 75px;\n      color: #ddd;\n      line-height: 1;\n}\n.card .match p[data-v-a060e91c] {\n    font-size: 25px;\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 
