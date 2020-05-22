@@ -54057,11 +54057,13 @@ var render = function() {
                 )
               ])
             ]
-          : [
+          : _vm.loading
+          ? [
               _c("div", { staticClass: "col-12 text-center" }, [
                 _vm._v("\n                Please wait...\n            ")
               ])
-            ],
+            ]
+          : _vm._e(),
         _vm._v(" "),
         _vm.result.length
           ? [

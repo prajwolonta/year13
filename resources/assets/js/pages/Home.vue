@@ -33,7 +33,7 @@
                     Please select two Occupations from above and click Compare
                 </div>
             </template>
-            <template v-else="loading">
+            <template v-else-if="loading">
                 <div class="col-12 text-center">
                     Please wait...
                 </div>
