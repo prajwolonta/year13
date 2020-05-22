@@ -40,26 +40,10 @@
             </template>
             <template v-if="result.length">
                 <div class="col-12">
-                    <div class="card" v-for="(res, ind) in result" :key="ind">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-1">
-                                    <p><strong>#{{ ind + 1}}</strong></p>
-                                </div>
-                                <div class="col-sm-5">
-                                    <p>{{ res.occupation_1 }}</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <p>{{ res.occupation_2 }}</p>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="match">
-                                        <p>{{ res.match }}%</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <template v-for="(res, ind) in result" >
+                        <occupation-card :card="res" :key="ind"/>
+                    </template>
+
                 </div>
             </template>
         </div>
@@ -68,10 +52,12 @@
 
 <script>
     import SelectOccupation from '../components/form-controls/SelectOccupation';
+    import OccupationCard from "../components/OccupationCard";
     export default {
         name: 'home-page',
         components: {
-            SelectOccupation
+            SelectOccupation,
+            OccupationCard
         },
         data() {
             return {
@@ -114,16 +100,5 @@
             margin-bottom: 0.2rem
         }
     }
-    .card{
-        margin-bottom:15px;
-        p{
-            font-size: 16px;
-        }
-        .match{
-            p{
-                font-size:25px;
-                font-weight: bold;
-            }
-        }
-    }
+
 </style>

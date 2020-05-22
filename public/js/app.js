@@ -52804,7 +52804,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.form-group label[data-v-440dff1c] {\n  font-size: 0.8rem;\n  text-align: left;\n  display: block;\n  margin-bottom: 0.2rem;\n}\n.card[data-v-440dff1c] {\n  margin-bottom: 15px;\n}\n.card p[data-v-440dff1c] {\n    font-size: 16px;\n}\n.card .match p[data-v-440dff1c] {\n    font-size: 25px;\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "\n.form-group label[data-v-440dff1c] {\n  font-size: 0.8rem;\n  text-align: left;\n  display: block;\n  margin-bottom: 0.2rem;\n}\n", ""]);
 
 // exports
 
@@ -52850,6 +52850,8 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_form_controls_SelectOccupation__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_form_controls_SelectOccupation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_form_controls_SelectOccupation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_OccupationCard__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_OccupationCard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_OccupationCard__);
 //
 //
 //
@@ -52902,28 +52904,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'home-page',
     components: {
-        SelectOccupation: __WEBPACK_IMPORTED_MODULE_0__components_form_controls_SelectOccupation___default.a
+        SelectOccupation: __WEBPACK_IMPORTED_MODULE_0__components_form_controls_SelectOccupation___default.a,
+        OccupationCard: __WEBPACK_IMPORTED_MODULE_1__components_OccupationCard___default.a
     },
     data: function data() {
         return {
@@ -54082,34 +54070,14 @@ var render = function() {
               _c(
                 "div",
                 { staticClass: "col-12" },
-                _vm._l(_vm.result, function(res, ind) {
-                  return _c("div", { key: ind, staticClass: "card" }, [
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-sm-1" }, [
-                          _c("p", [
-                            _c("strong", [_vm._v("#" + _vm._s(ind + 1))])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-5" }, [
-                          _c("p", [_vm._v(_vm._s(res.occupation_1))])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-4" }, [
-                          _c("p", [_vm._v(_vm._s(res.occupation_2))])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-2" }, [
-                          _c("div", { staticClass: "match" }, [
-                            _c("p", [_vm._v(_vm._s(res.match) + "%")])
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                }),
-                0
+                [
+                  _vm._l(_vm.result, function(res, ind) {
+                    return [
+                      _c("occupation-card", { key: ind, attrs: { card: res } })
+                    ]
+                  })
+                ],
+                2
               )
             ]
           : _vm._e()
@@ -54398,7 +54366,7 @@ var render = function() {
     "div",
     { staticClass: "body", style: { "--brand-color": "#fbb040" } },
     [
-      _c("top-bar", { attrs: { name: "test" } }),
+      _c("top-bar", { attrs: { name: "Prajwol Raj Onta" } }),
       _vm._v(" "),
       _c("transition", { attrs: { name: "fade" } }, [_c("router-view")], 1)
     ],
@@ -54420,6 +54388,183 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(85)
+}
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(81)
+/* template */
+var __vue_template__ = __webpack_require__(82)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-a060e91c"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/OccupationCard.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a060e91c", Component.options)
+  } else {
+    hotAPI.reload("data-v-a060e91c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 79 */,
+/* 80 */,
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "OccupationCard",
+    props: ['card', 'key']
+});
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card-body" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-sm-1" }, [
+          _c("p", [_c("strong", [_vm._v("#" + _vm._s(_vm.key + 1))])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-5" }, [
+          _c("p", [_vm._v(_vm._s(_vm.card.occupation_1))])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("p", [_vm._v(_vm._s(_vm.card.occupation_2))])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-2" }, [
+          _c("div", { staticClass: "match" }, [
+            _c("p", [_vm._v(_vm._s(_vm.card.match) + "%")])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a060e91c", module.exports)
+  }
+}
+
+/***/ }),
+/* 83 */,
+/* 84 */,
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(86);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("2d820f86", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a060e91c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./OccupationCard.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a060e91c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./OccupationCard.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.card[data-v-a060e91c] {\n  margin-bottom: 15px;\n}\n.card p[data-v-a060e91c] {\n    font-size: 16px;\n}\n.card .match p[data-v-a060e91c] {\n    font-size: 25px;\n    font-weight: bold;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

@@ -1,6 +1,6 @@
 <template>
     <div class="body" :style="{'--brand-color': '#fbb040'}">
-        <top-bar name="test"></top-bar>
+        <top-bar name="Prajwol Raj Onta"></top-bar>
         <transition name="fade">
             <router-view></router-view>
         </transition>
